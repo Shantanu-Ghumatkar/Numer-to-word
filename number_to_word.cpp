@@ -32,7 +32,12 @@ void convert_to_words(char *num)
             break;
         }
     }
-
+ /*for value zero with more than one zero*/
+    len = strlen(num);
+    if (len ==0)
+    {
+        cout << "zero";
+    }
     /* The first string is not used, it is to make
             array indexing simple */
     char *single_digits[] = {"zero", "one", "two ", "three ", "four",
@@ -147,12 +152,7 @@ void convert_to_words(char *num)
         }
         ++num;
     }
-    /*for value zero with more than one zero*/
-    len = strlen(num);
-    if (j == len / 3)
-    {
-        cout << "zero";
-    }
+   
 }
 
 // Driver Code
